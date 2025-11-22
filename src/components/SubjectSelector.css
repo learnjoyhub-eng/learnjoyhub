@@ -1,0 +1,242 @@
+.subject-selector-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.subject-selector-content {
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+}
+
+.back-button-home {
+  background: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  color: #11998e;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: -60px;
+}
+
+.back-button-home:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.app-title {
+  color: white;
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.6s ease;
+}
+
+.app-subtitle {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.3rem;
+  margin-bottom: 50px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.8s ease;
+}
+
+.subject-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  perspective: 1000px;
+}
+
+.subject-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease;
+}
+
+.subject-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.subject-card:hover::before {
+  left: 100%;
+}
+
+.subject-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.subject-card.hovered {
+  transform: translateY(-15px) scale(1.05);
+}
+
+.subject-card.english-subject {
+  border-top: 5px solid #4ECDC4;
+}
+
+.subject-card.english-subject:hover {
+  background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+  color: white;
+}
+
+.subject-card.maths-subject {
+  border-top: 5px solid #4ECDC4;
+}
+
+.subject-card.maths-subject:hover {
+  background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+  color: white;
+}
+
+.subject-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  display: block;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.subject-card.hovered .subject-icon {
+  animation: spin 0.6s ease-in-out;
+}
+
+.subject-card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.subject-card p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.subject-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+  text-align: left;
+}
+
+.subject-features li {
+  font-size: 1rem;
+  padding: 8px 0;
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subject-features li::before {
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.subject-arrow {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 2rem;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.subject-card:hover .subject-arrow {
+  opacity: 1;
+  transform: translateX(10px);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(360deg) scale(1.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 2.5rem;
+  }
+
+  .app-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+
+  .subject-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .subject-card {
+    padding: 30px 20px;
+  }
+
+  .subject-icon {
+    font-size: 3rem;
+  }
+
+  .subject-card h2 {
+    font-size: 1.5rem;
+  }
+}

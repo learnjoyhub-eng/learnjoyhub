@@ -1,0 +1,174 @@
+.operation-selector-container,
+.difficulty-selector-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+  padding: 20px;
+}
+
+.back-button-op {
+  background: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  color: #44A08D;
+  font-weight: bold;
+  margin-bottom: 30px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.back-button-op:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.operation-selector-content,
+.difficulty-selector-content {
+  max-width: 1000px;
+  margin: 80px auto 0;
+  text-align: center;
+}
+
+.operation-selector-content h1,
+.difficulty-selector-content h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.operation-selector-content p,
+.difficulty-selector-content p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.operation-cards,
+.difficulty-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.operation-card,
+.difficulty-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.operation-card:hover,
+.difficulty-card:hover,
+.difficulty-card.hovered {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.op-icon,
+.difficulty-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  display: block;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.operation-card:hover .op-icon,
+.difficulty-card:hover .difficulty-icon {
+  animation: spin 0.6s ease-in-out;
+}
+
+.operation-card h2,
+.difficulty-card h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.operation-card p,
+.difficulty-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.example {
+  background: #f0f0f0;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.select-op-btn,
+.select-difficulty-btn {
+  background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 6px 20px rgba(245, 87, 108, 0.4);
+}
+
+.select-op-btn:hover,
+.select-difficulty-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(245, 87, 108, 0.6);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(360deg) scale(1.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .operation-selector-content,
+  .difficulty-selector-content {
+    margin-top: 60px;
+  }
+
+  .operation-selector-content h1,
+  .difficulty-selector-content h1 {
+    font-size: 2rem;
+  }
+
+  .operation-cards,
+  .difficulty-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .operation-card,
+  .difficulty-card {
+    padding: 30px 20px;
+  }
+}

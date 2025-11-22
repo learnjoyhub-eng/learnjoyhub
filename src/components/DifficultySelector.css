@@ -1,0 +1,172 @@
+.difficulty-selector-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button-difficulty {
+  background: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  color: #44A08D;
+  font-weight: bold;
+  position: absolute;
+  top: 90px;
+  left: 20px;
+  z-index: 10;
+}
+
+.back-button-difficulty:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.difficulty-selector-content {
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+.difficulty-selector-content h1 {
+  color: white;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.6s ease;
+}
+
+.difficulty-selector-content p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  animation: slideDown 0.8s ease;
+}
+
+.difficulty-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.difficulty-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.difficulty-card:hover,
+.difficulty-card.hovered {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.difficulty-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  display: block;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.difficulty-card:hover .difficulty-icon,
+.difficulty-card.hovered .difficulty-icon {
+  animation: spin 0.6s ease-in-out;
+}
+
+.difficulty-card h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.difficulty-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.example {
+  background: #f0f0f0;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.start-button {
+  background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 6px 20px rgba(245, 87, 108, 0.4);
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(245, 87, 108, 0.6);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(360deg) scale(1.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .difficulty-selector-content h1 {
+    font-size: 2rem;
+  }
+
+  .difficulty-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .difficulty-card {
+    padding: 30px 20px;
+  }
+}
