@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useWords } from '../hooks/useWords';
 import { useProgress } from '../hooks/useProgress';
-import GoogleAd from '../components/GoogleAd';
-import GoogleAdSidebar from '../components/GoogleAdSidebar';
 import type { Word, GameSettings } from '../types';
 import { getSettings, saveSettings, resetProgress } from '../utils/localStorage';
 import { getEnglishVoices, speakWord } from '../utils/gameHelpers';
@@ -90,9 +88,6 @@ const ParentMode = ({ onBack }: ParentModeProps) => {
 
   return (
     <div className="parent-mode-container">
-      {/* Sidebar Ad - Sticky on right side */}
-      <GoogleAdSidebar adSlot="1234567895" />
-
       <div className="parent-header">
         <button className="back-button" onClick={onBack}>← Back</button>
         <h1>👨‍👩‍👧 Parent Dashboard</h1>
@@ -377,13 +372,6 @@ const ParentMode = ({ onBack }: ParentModeProps) => {
             </div>
           </div>
         )}
-
-        {/* Ad Section - Bottom of Parent Mode */}
-        <GoogleAd 
-          adSlot="1234567892"
-          adFormat="auto"
-          className="parent-mode-ad"
-        />
       </div>
     </div>
   );
