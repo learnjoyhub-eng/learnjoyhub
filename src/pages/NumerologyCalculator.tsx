@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import GoogleAd from '../components/GoogleAd';
-import GoogleAdSidebar from '../components/GoogleAdSidebar';
 import './NumerologyCalculator.css';
 
 interface NumerologyCalculatorProps {
@@ -248,9 +247,6 @@ const NumerologyCalculator: React.FC<NumerologyCalculatorProps> = ({ onBack }) =
 
   return (
     <div className="numerology-container">
-      {/* Sidebar Ad - Sticky on right side */}
-      <GoogleAdSidebar adSlot="1234567894" />
-
       <button className="back-button-numerology" onClick={onBack}>
         ← Back
       </button>

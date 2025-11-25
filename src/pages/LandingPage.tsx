@@ -1,7 +1,6 @@
 import React from 'react';
 import { trackComponentAccess } from '../utils/analytics';
 import GoogleAd from '../components/GoogleAd';
-import GoogleAdSidebar from '../components/GoogleAdSidebar';
 import './LandingPage.css';
 
 interface LandingPageProps {
@@ -16,9 +15,6 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSelectModule }) => {
 
   return (
     <div className="landing-page">
-      {/* Sidebar Ad - Sticky on right side */}
-      <GoogleAdSidebar adSlot="1234567893" />
-
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
@@ -90,13 +86,6 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSelectModule }) => {
           </div>
         </div>
       </section>
-
-      {/* In-Content Ad - Between Modules and About */}
-      <GoogleAd 
-        adSlot="1234567896"
-        adFormat="auto"
-        className="landing-page-ad-middle"
-      />
 
       {/* About Section */}
       <section id="about" className="about-section">
