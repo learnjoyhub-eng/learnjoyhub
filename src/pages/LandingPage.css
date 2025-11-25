@@ -562,7 +562,76 @@
   }
 
   .module-card {
+    padding: 20px 15px;
+  }
+}
+
+/* Educational Content Section */
+.educational-content-section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #f9f9f9;
+}
+
+.educational-content-section h2 {
+  font-size: 2.5rem;
+  color: #11998e;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.content-grid {
+  display: grid;
+  gap: 40px;
+}
+
+.content-article {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  line-height: 1.8;
+}
+
+.content-article h3 {
+  color: #11998e;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #38ef7d;
+  padding-bottom: 10px;
+}
+
+.content-article p {
+  color: #444;
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.content-article p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .educational-content-section {
+    padding: 50px 15px;
+  }
+
+  .educational-content-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .content-article {
     padding: 25px 20px;
+  }
+
+  .content-article h3 {
+    font-size: 1.4rem;
+  }
+
+  .content-article p {
+    font-size: 1rem;
   }
 }
 

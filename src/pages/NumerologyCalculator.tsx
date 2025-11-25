@@ -1072,6 +1072,199 @@ const NumerologyCalculator: React.FC<NumerologyCalculatorProps> = ({ onBack }) =
             </div>
           </div>
 
+          {/* Educational Articles About Numerology */}
+          <div className="numerology-articles-section">
+            <h2>Understanding Numerology: A Comprehensive Guide</h2>
+            
+            <article className="numerology-article">
+              <h3>The Ancient Origins of Numerology</h3>
+              <p>
+                Numerology has been practiced for thousands of years across different cultures and civilizations. 
+                The ancient Egyptians, Greeks, Romans, Chinese, and Hebrew scholars all recognized the significance 
+                of numbers beyond their mathematical value. Pythagoras, the famous Greek mathematician and philosopher 
+                (circa 570-495 BCE), is often credited as the father of modern Western numerology, though number 
+                mysticism existed long before his time.
+              </p>
+              <p>
+                Pythagoras believed that everything in the universe could be expressed through numbers, and that 
+                numbers held vibrational properties that influenced physical reality. His teachings formed the 
+                foundation of the Pythagorean numerology system we use today. Meanwhile, the ancient Babylonians 
+                developed the Chaldean system, which is considered by many to be the oldest and most accurate 
+                numerology system, though it's more complex to calculate.
+              </p>
+              <p>
+                In Hebrew tradition, the Kabbalah system of numerology connects numbers with Hebrew letters and 
+                their sacred meanings. This system is deeply intertwined with Jewish mysticism and the study of 
+                the Torah. Each of these systems offers unique insights, and we've incorporated all three into 
+                our calculator to give you the most comprehensive numerological analysis possible.
+              </p>
+            </article>
+
+            <article className="numerology-article">
+              <h3>How Numerology Works: The Science Behind the Mystery</h3>
+              <p>
+                At its core, numerology is based on the principle that numbers carry specific vibrations and energies. 
+                Every letter in your name corresponds to a number, and every digit in your birth date has significance. 
+                By reducing these numbers to single digits (or master numbers), numerologists believe they can reveal 
+                insights about personality, destiny, and life purpose.
+              </p>
+              <p>
+                The most common numerological calculations are:
+              </p>
+              <ul style={{marginLeft: '30px', lineHeight: '1.8'}}>
+                <li><strong>Life Path Number:</strong> Calculated from your birth date, this number represents your 
+                core essence and the path you're meant to walk in life. It's considered the most important number in 
+                your numerology chart.</li>
+                <li><strong>Destiny Number (Expression Number):</strong> Derived from your full birth name, this number 
+                reveals your natural talents, abilities, and the direction you're meant to take in life.</li>
+                <li><strong>Personality Number:</strong> Based on the consonants in your name, this shows how others 
+                perceive you and the face you present to the world.</li>
+                <li><strong>Soul Urge Number (Heart's Desire):</strong> Calculated from the vowels in your name, this 
+                reveals your innermost desires, motivations, and what truly drives you.</li>
+              </ul>
+              <p>
+                While numerology isn't recognized as a science in the traditional sense, millions of people find value 
+                in its insights. Think of it as a tool for self-reflection and personal growth rather than a predictive 
+                science. The patterns and correlations that numerology reveals can help you understand yourself better 
+                and make more conscious choices aligned with your natural inclinations.
+              </p>
+            </article>
+
+            <article className="numerology-article">
+              <h3>Understanding Master Numbers: 11, 22, and 33</h3>
+              <p>
+                In numerology, certain double-digit numbers are considered "Master Numbers" and are never reduced to 
+                single digits. These are 11, 22, and 33. Some numerologists also include 44, but the first three are 
+                universally recognized as master numbers carrying special significance and spiritual power.
+              </p>
+              <p>
+                <strong>Master Number 11 - The Spiritual Messenger:</strong> People with this life path are believed 
+                to be highly intuitive, spiritually aware, and capable of great insight. They often serve as bridges 
+                between the spiritual and material worlds. However, the intensity of this number can also bring challenges, 
+                including anxiety and self-doubt. The key for 11s is to trust their intuition and share their spiritual 
+                insights with others.
+              </p>
+              <p>
+                <strong>Master Number 22 - The Master Builder:</strong> This is considered the most powerful number in 
+                numerology. 22s have the practical skills of the number 4 (2+2=4) combined with the visionary power of 
+                master numbers. They're capable of turning dreams into reality on a grand scale, often leaving lasting 
+                legacies. Famous leaders, architects, and innovators often have 22 in their charts.
+              </p>
+              <p>
+                <strong>Master Number 33 - The Master Teacher:</strong> This is the rarest and most evolved of the master 
+                numbers. 33 combines the intuition of 11 with the practicality of 22, creating someone who can heal and 
+                uplift humanity. People with 33 are often drawn to healing professions, teaching, or humanitarian work. 
+                They have deep compassion and a strong desire to serve others.
+              </p>
+              <p>
+                If you have a master number in your chart, it's both a gift and a responsibility. Master numbers indicate 
+                higher spiritual potential and greater challenges. Many people with master numbers don't fully embody 
+                their potential until later in life, as it takes time to grow into the wisdom these numbers represent.
+              </p>
+            </article>
+
+            <article className="numerology-article">
+              <h3>Practical Applications: Using Numerology in Daily Life</h3>
+              <p>
+                While skeptics may dismiss numerology as superstition, practitioners have found practical ways to apply 
+                numerological insights to enhance their lives. Here are some common applications:
+              </p>
+              <p>
+                <strong>Career Guidance:</strong> Your destiny number can suggest careers that align with your natural 
+                talents. For example, a person with destiny number 3 (creativity and communication) might thrive in 
+                fields like writing, marketing, or the arts, while someone with destiny number 8 (power and material 
+                success) might excel in business, finance, or leadership roles.
+              </p>
+              <p>
+                <strong>Relationship Compatibility:</strong> Numerology can offer insights into relationship dynamics. 
+                By comparing life path numbers, you can understand potential challenges and strengths in partnerships. 
+                For instance, a life path 1 (independent leader) and life path 2 (cooperative partner) might need to 
+                balance autonomy with togetherness, but they can complement each other beautifully when both are mature 
+                and self-aware.
+              </p>
+              <p>
+                <strong>Timing of Major Decisions:</strong> Personal year numbers (calculated by adding your birth 
+                day and month to the current year) can help you understand the energy and themes of a particular year. 
+                A personal year 9 might be a time for completion and letting go, while a personal year 1 signals new 
+                beginnings and fresh starts. Understanding these cycles can help you time major life decisions more 
+                consciously.
+              </p>
+              <p>
+                <strong>Self-Understanding and Personal Growth:</strong> Perhaps the most valuable application of 
+                numerology is as a mirror for self-reflection. Reading about your numbers can help you recognize patterns 
+                in your behavior, understand your strengths and challenges, and make more conscious choices. Even if you 
+                don't believe numbers have mystical power, the insights can prompt valuable self-examination.
+              </p>
+            </article>
+
+            <article className="numerology-article">
+              <h3>Comparing Numerology Systems: Which One Is Right for You?</h3>
+              <p>
+                Our calculator offers three major numerology systems: Pythagorean, Chaldean, and Kabbalah. Each has its 
+                own methodology and cultural background. Understanding the differences can help you choose which system 
+                resonates most with you.
+              </p>
+              <p>
+                <strong>Pythagorean (Western) System:</strong> This is the most widely used system in the Western world. 
+                It assigns numbers 1-9 to letters A-Z in sequence. It's straightforward to calculate and interpret, making 
+                it popular for beginners. The Pythagorean system focuses on the personality and external traits, giving 
+                insights into how you interact with the world around you.
+              </p>
+              <p>
+                <strong>Chaldean (Ancient Babylonian) System:</strong> Considered by many to be more accurate but more 
+                complex, the Chaldean system uses numbers 1-8 (no 9, as it's considered sacred) and assigns them based 
+                on vibrational patterns rather than alphabetical order. It's also based on your birth name rather than 
+                the name you use currently. The Chaldean system is thought to reveal deeper, more spiritual aspects of 
+                your being.
+              </p>
+              <p>
+                <strong>Kabbalah (Hebrew) System:</strong> This system is deeply connected to Jewish mysticism and 
+                Hebrew letters. It focuses primarily on your name and doesn't typically use your birth date. The Kabbalah 
+                system has 22 vibrations corresponding to the 22 letters of the Hebrew alphabet, plus an additional zero 
+                vibration. It's often used for spiritual development and understanding your soul's purpose.
+              </p>
+              <p>
+                Which system should you use? Many numerology enthusiasts calculate their numbers using all three systems 
+                and compare the results. You might find that one system's interpretation resonates more deeply with you, 
+                or you might discover that each system reveals different facets of your personality and life path. There's 
+                no "wrong" choice—use the system (or systems) that speaks to you most powerfully.
+              </p>
+            </article>
+
+            <article className="numerology-article">
+              <h3>Skepticism and Belief: Finding Your Own Truth</h3>
+              <p>
+                It's important to approach numerology with an open mind while maintaining healthy skepticism. Numerology 
+                is not recognized by mainstream science, and there's no empirical evidence that numbers have mystical 
+                properties or can predict the future. However, the lack of scientific validation doesn't necessarily 
+                negate numerology's value as a tool for self-reflection and personal growth.
+              </p>
+              <p>
+                Consider numerology as you might consider other personality frameworks like the Myers-Briggs Type Indicator 
+                or the Enneagram. These systems aren't scientifically proven either, yet millions find them useful for 
+                understanding themselves and others. The value lies not in supernatural predictive power, but in the 
+                self-awareness and insights these frameworks can spark.
+              </p>
+              <p>
+                The "Barnum Effect" (also called the Forer Effect) explains why general personality descriptions often 
+                feel personally meaningful—we tend to accept vague, general statements as uniquely applicable to ourselves. 
+                This psychological principle means you should be cautious about accepting numerological descriptions 
+                uncritically. Look for specific, actionable insights rather than just flattering generalities.
+              </p>
+              <p>
+                That said, if numerology helps you understand yourself better, make more thoughtful decisions, or simply 
+                brings you joy and fascination, then it serves a valuable purpose in your life. Use it as one tool among 
+                many for self-understanding, but never let it override your own judgment, intuition, or professional advice 
+                when making important life decisions.
+              </p>
+              <p>
+                Ultimately, whether you view numerology as mystical wisdom or psychological tool, the key is to approach 
+                it with curiosity, openness, and discernment. Take what resonates, leave what doesn't, and always trust 
+                your own inner wisdom above any external system of analysis.
+              </p>
+            </article>
+          </div>
+
           {/* Ad Section - After all content */}
           <GoogleAd 
             adSlot="1234567891"

@@ -1413,3 +1413,87 @@
     padding: 12px;
   }
 }
+
+/* Numerology Articles Section */
+.numerology-articles-section {
+  margin-top: 60px;
+  padding: 40px;
+  background: #f9f9f9;
+  border-radius: 20px;
+}
+
+.numerology-articles-section h2 {
+  color: #11998e;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #38ef7d;
+  padding-bottom: 15px;
+}
+
+.numerology-article {
+  background: white;
+  padding: 35px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  line-height: 1.8;
+}
+
+.numerology-article:last-child {
+  margin-bottom: 0;
+}
+
+.numerology-article h3 {
+  color: #11998e;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+  border-left: 5px solid #38ef7d;
+  padding-left: 20px;
+}
+
+.numerology-article p {
+  color: #444;
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+.numerology-article ul {
+  color: #444;
+  font-size: 1.05rem;
+  margin: 20px 0;
+}
+
+.numerology-article ul li {
+  margin-bottom: 15px;
+}
+
+.numerology-article strong {
+  color: #11998e;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .numerology-articles-section {
+    padding: 25px 15px;
+    margin-top: 40px;
+  }
+
+  .numerology-articles-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .numerology-article {
+    padding: 25px 20px;
+  }
+
+  .numerology-article h3 {
+    font-size: 1.4rem;
+  }
+
+  .numerology-article p,
+  .numerology-article ul {
+    font-size: 1rem;
+  }
+}

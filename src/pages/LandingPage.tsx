@@ -171,6 +171,151 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSelectModule }) => {
         </div>
       </section>
 
+      {/* Educational Content Section */}
+      <section className="educational-content-section">
+        <h2>The Power of Interactive Learning</h2>
+        
+        <div className="content-grid">
+          <article className="content-article">
+            <h3>Why Interactive Learning Works Better</h3>
+            <p>
+              Traditional learning methods often rely on passive absorption of information through reading 
+              and listening. However, research in educational psychology consistently shows that interactive 
+              learning—where students actively engage with the material—leads to significantly better retention 
+              and understanding.
+            </p>
+            <p>
+              At LearnJoyHub, we've designed our modules to be highly interactive. When a child practices 
+              spelling, they don't just read words—they type them, hear them pronounced, get immediate feedback, 
+              and see their progress visualized. This multi-sensory approach activates different parts of the 
+              brain, creating stronger neural pathways and making learning more effective and enjoyable.
+            </p>
+            <p>
+              Studies show that interactive learning can improve retention rates by up to 75% compared to 
+              passive learning methods. By making learning a game rather than a chore, children develop 
+              intrinsic motivation to learn, which is far more powerful than external pressure.
+            </p>
+          </article>
+
+          <article className="content-article">
+            <h3>Building Strong Foundations in Primary Education</h3>
+            <p>
+              The primary school years, particularly 2nd standard, are crucial for building fundamental 
+              academic skills. This is when children transition from learning to read to reading to learn. 
+              Strong spelling and mathematical foundations during these years set the stage for academic 
+              success throughout their educational journey.
+            </p>
+            <p>
+              Our platform focuses on the ICSE curriculum for 2nd standard students, covering essential 
+              subjects like English spelling and Mathematics. We understand that every child learns at their 
+              own pace, which is why our content is organized by difficulty levels—Easy, Medium, and Hard. 
+              Parents can also add custom words through our Parent Mode, tailoring the learning experience 
+              to their child's specific needs.
+            </p>
+            <p>
+              Mathematics is introduced through fundamental operations: addition, subtraction, multiplication, 
+              and division. Each operation includes both table practice (for building memory) and problem-solving 
+              exercises (for developing analytical thinking). This dual approach ensures children not only 
+              memorize facts but also understand the concepts behind them.
+            </p>
+          </article>
+
+          <article className="content-article">
+            <h3>The Role of Parents in Modern Education</h3>
+            <p>
+              We believe parents are partners in their child's education, not just supervisors. That's why 
+              we've created a comprehensive Parent Mode that gives you real control and visibility into your 
+              child's learning journey.
+            </p>
+            <p>
+              Through Parent Mode, you can add custom words based on your child's school curriculum or 
+              specific areas where they need practice. You can mark certain words as priority, track detailed 
+              progress statistics, and even customize game settings like timer duration and difficulty levels. 
+              This level of customization ensures the platform adapts to your child rather than forcing your 
+              child to adapt to rigid content.
+            </p>
+            <p>
+              Our progress tracking system shows you exactly which words your child has mastered and which 
+              ones need more practice. You can see accuracy rates, time taken, and improvement trends over 
+              time. This data-driven approach helps you make informed decisions about where to focus your 
+              child's learning efforts.
+            </p>
+          </article>
+
+          <article className="content-article">
+            <h3>Numerology: Understanding Life's Patterns</h3>
+            <p>
+              Beyond academic subjects, LearnJoyHub offers a unique feature—a comprehensive Numerology 
+              Calculator. Numerology is the ancient study of numbers and their influence on our lives. 
+              While it's not a science in the traditional sense, millions of people worldwide find meaning 
+              and guidance through numerological insights.
+            </p>
+            <p>
+              Our numerology module supports three major systems: Pythagorean (Western), Chaldean (Babylonian), 
+              and Kabbalah (Hebrew). Each system has its own methodology for calculating life path numbers, 
+              destiny numbers, and personality numbers. We provide detailed explanations of what each number 
+              means, including personality traits, strengths, challenges, and life purposes associated with 
+              each number from 1 to 9, plus master numbers 11, 22, and 33.
+            </p>
+            <p>
+              Whether you're curious about numerology or a serious practitioner, our calculator provides 
+              accurate calculations and comprehensive interpretations. We've included educational content 
+              explaining the history of numerology, how different cultures have used numbers for divination 
+              and self-understanding, and how to interpret your personal numbers in the context of your life 
+              journey.
+            </p>
+          </article>
+
+          <article className="content-article">
+            <h3>Creating a Safe Digital Learning Environment</h3>
+            <p>
+              In today's digital age, keeping children safe online is a top priority for parents. LearnJoyHub 
+              is designed with child safety at its core. We don't collect any personal information from 
+              children. All progress data is stored locally in your browser, giving you complete control over 
+              your child's data.
+            </p>
+            <p>
+              We also maintain a strict "no ads in learning zones" policy. While you may see educational ads 
+              on informational pages (which help us keep the platform free), the actual learning interfaces 
+              where children interact—the spelling game, math practice areas—are completely ad-free. This 
+              ensures children can focus on learning without distractions or exposure to inappropriate content.
+            </p>
+            <p>
+              Our interface is designed to be intuitive even for young learners, with large buttons, clear 
+              instructions, and colorful, engaging graphics. We use positive reinforcement—celebrating 
+              successes and gently encouraging improvement on mistakes—to build confidence and motivation.
+            </p>
+          </article>
+
+          <article className="content-article">
+            <h3>The Future of Learning is Here</h3>
+            <p>
+              Education is evolving rapidly, and digital learning platforms are becoming essential tools in 
+              every household. LearnJoyHub represents the future of education—personalized, interactive, 
+              data-driven, and accessible to everyone with an internet connection.
+            </p>
+            <p>
+              We're constantly working on expanding our platform. Future updates will include more grade 
+              levels, additional subjects like Science and Social Studies, more advanced math topics, 
+              multiplayer challenges where children can compete with friends, achievement badges and rewards 
+              systems, and even more customization options for parents.
+            </p>
+            <p>
+              Our vision is to create a complete learning ecosystem that grows with your child from primary 
+              school through high school, combining academic excellence with life skills and wisdom. By 
+              integrating traditional curriculum with modern learning science and even ancient wisdom like 
+              numerology, we're creating something truly unique in the educational technology space.
+            </p>
+            <p>
+              Join us on this journey to make learning joyful, effective, and meaningful. Whether you're a 
+              parent looking for supplemental learning tools, a teacher seeking interactive resources, or 
+              simply someone interested in numerology and self-discovery, LearnJoyHub has something valuable 
+              to offer you.
+            </p>
+          </article>
+        </div>
+      </section>
+
       {/* Ad Section - Non-intrusive placement */}
       <GoogleAd 
         adSlot="1234567890"
