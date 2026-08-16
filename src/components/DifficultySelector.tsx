@@ -4,7 +4,7 @@ import { useState } from 'react';
 import './DifficultySelector.css';
 
 type OperationType = 'addition' | 'subtraction';
-type DifficultyLevel = '2digit' | '3digit';
+type DifficultyLevel = '2digit' | '3digit' | '4digit';
 
 interface DifficultySelectorProps {
   operation: OperationType;
@@ -51,6 +51,19 @@ const DifficultySelector = ({ operation, onSelectDifficulty, onBack }: Difficult
             <h2>3-Digit Numbers</h2>
             <p>Numbers from 100 to 999</p>
             <div className="example">Example: 250 + 340 = ?</div>
+            <button className="start-button">Start</button>
+          </div>
+
+          <div
+            className={`difficulty-card ${hoveredDifficulty === '4digit' ? 'hovered' : ''}`}
+            onClick={() => onSelectDifficulty('4digit')}
+            onMouseEnter={() => setHoveredDifficulty('4digit')}
+            onMouseLeave={() => setHoveredDifficulty(null)}
+          >
+            <div className="difficulty-icon">4️⃣</div>
+            <h2>4-Digit Numbers</h2>
+            <p>Numbers from 1000 to 9999</p>
+            <div className="example">Example: 2500 + 3400 = ?</div>
             <button className="start-button">Start</button>
           </div>
         </div>

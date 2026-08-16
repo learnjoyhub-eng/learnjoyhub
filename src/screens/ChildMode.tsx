@@ -15,6 +15,8 @@ const ChildMode = () => {
   const { words, loading } = useWords();
   const { progress, updateProgress } = useProgress();
   const { settings } = useSettings();
+  const activeGrade = settings.grade ?? 'grade2';
+  const gradeWords = words.filter(w => (w.grade ?? 'grade2') === activeGrade);
   const [currentWord, setCurrentWord] = useState<Word | null>(null);
   const [userInput, setUserInput] = useState('');
   const [attemptCount, setAttemptCount] = useState(0);
@@ -37,12 +39,12 @@ const ChildMode = () => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const startNewWord = () => {
-    if (words.length === 0) {
+    if (gradeWords.length === 0) {
       return;
     }
 
     // Filter words based on selected category and difficulty
-    let filteredWords = words;
+    let filteredWords = gradeWords;
 
     if (selectedCategory !== 'all') {
       filteredWords = filteredWords.filter(w => w.category === selectedCategory);
@@ -89,7 +91,7 @@ const ChildMode = () => {
 
   useEffect(() => {
     // Start game only after words are loaded and only once
-    if (!loading && words.length > 0 && !isInitialized) {
+    if (!loading && gradeWords.length > 0 && !isInitialized) {
       setIsInitialized(true);
       startNewWord();
     }
@@ -228,8 +230,8 @@ const ChildMode = () => {
 
   const attemptsLeft = settings.maxAttempts - attemptCount;
 
-  // Get unique categories from words
-  const categories = ['all', ...Array.from(new Set(words.map(w => w.category).filter(Boolean)))];
+  // Get unique categories from words in the active grade
+  const categories = ['all', ...Array.from(new Set(gradeWords.map(w => w.category).filter(Boolean)))];
   const difficulties = ['all', 'easy', 'medium', 'hard'];
 
   return (
@@ -244,7 +246,7 @@ const ChildMode = () => {
       </div>
 
       {/* Filters Section */}
-      {!loading && words.length > 0 && (
+      {!loading && gradeWords.length > 0 && (
         <div className="filters-section">
           <div className="filter-group">
             <label htmlFor="category-filter">📁 Category:</label>
@@ -299,7 +301,7 @@ const ChildMode = () => {
             </div>
           )}
 
-          {!loading && words.length === 0 && (
+          {!loading && gradeWords.length === 0 && (
             <div className="no-words-state">
               <div className="empty-icon">📚</div>
               <h2>No words available!</h2>
@@ -310,7 +312,7 @@ const ChildMode = () => {
             </div>
           )}
 
-          {!loading && words.length > 0 && currentWord && (
+          {!loading && gradeWords.length > 0 && currentWord && (
             <>
               <div className="word-category">
                 {currentWord.category && (

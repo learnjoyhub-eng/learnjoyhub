@@ -6,7 +6,7 @@ import DifficultySelector from './DifficultySelector';
 import MathWorksheet from '../screens/MathWorksheet';
 
 type OperationType = 'addition' | 'subtraction';
-type DifficultyLevel = '2digit' | '3digit';
+type DifficultyLevel = '2digit' | '3digit' | '4digit';
 
 interface MathsOperationPracticeProps {
   operation: OperationType;

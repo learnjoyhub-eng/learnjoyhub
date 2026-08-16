@@ -5,8 +5,8 @@ import { useRouter } from 'next/navigation';
 import { useWords } from '../hooks/useWords';
 import { useProgress } from '../hooks/useProgress';
 import { useSettings } from '../hooks/useSettings';
-import type { Word, GameSettings } from '../types';
-import { resetProgress } from '../utils/localStorage';
+import type { Word, GameSettings, Grade } from '../types';
+import { resetProgress, GRADES } from '../utils/localStorage';
 import { getEnglishVoices, speakWord } from '../utils/gameHelpers';
 import './ParentMode.css';
 
@@ -20,10 +20,11 @@ const ParentMode = () => {
   const [showAddForm, setShowAddForm] = useState(false);
   const [editingWord, setEditingWord] = useState<Word | null>(null);
   const [testWord, setTestWord] = useState('hello');
-  const [newWord, setNewWord] = useState<{ word: string; difficulty: Word['difficulty']; category: string }>({
+  const [newWord, setNewWord] = useState<{ word: string; difficulty: Word['difficulty']; category: string; grade: Grade }>({
     word: '',
     difficulty: 'easy',
     category: '',
+    grade: settings.grade ?? 'grade2',
   });
 
   // Load available voices on component mount
@@ -53,8 +54,9 @@ const ParentMode = () => {
         difficulty: newWord.difficulty,
         category: newWord.category || undefined,
         isPriority: false,
+        grade: newWord.grade,
       });
-      setNewWord({ word: '', difficulty: 'easy', category: '' });
+      setNewWord({ word: '', difficulty: 'easy', category: '', grade: settings.grade ?? 'grade2' });
       setShowAddForm(false);
     }
   };
@@ -65,6 +67,7 @@ const ParentMode = () => {
         word: editingWord.word.trim(),
         difficulty: editingWord.difficulty,
         category: editingWord.category,
+        grade: editingWord.grade,
       });
       setEditingWord(null);
     }
@@ -141,6 +144,15 @@ const ParentMode = () => {
                   <option value="medium">Medium</option>
                   <option value="hard">Hard</option>
                 </select>
+                <select
+                  value={newWord.grade}
+                  onChange={(e) => setNewWord({ ...newWord, grade: e.target.value as Grade })}
+                  className="difficulty-select"
+                >
+                  {GRADES.map((g) => (
+                    <option key={g.value} value={g.value}>{g.label}</option>
+                  ))}
+                </select>
                 <input
                   type="text"
                   placeholder="Category (optional)"
@@ -172,6 +184,15 @@ const ParentMode = () => {
                         <option value="medium">Medium</option>
                         <option value="hard">Hard</option>
                       </select>
+                      <select
+                        value={editingWord.grade ?? 'grade2'}
+                        onChange={(e) => setEditingWord({ ...editingWord, grade: e.target.value as Grade })}
+                        className="difficulty-select-edit"
+                      >
+                        {GRADES.map((g) => (
+                          <option key={g.value} value={g.value}>{g.label}</option>
+                        ))}
+                      </select>
                       <input
                         type="text"
                         placeholder="Category"
@@ -191,6 +212,7 @@ const ParentMode = () => {
                         </div>
                         <div className="word-meta">
                           <span className={`difficulty-badge ${word.difficulty}`}>{word.difficulty}</span>
+                          <span className="category-badge">{word.grade === 'grade3' ? '3rd Std' : '2nd Std'}</span>
                           {word.category && <span className="category-badge">{word.category}</span>}
                         </div>
                       </div>
@@ -277,6 +299,20 @@ const ParentMode = () => {
             <h2>⚙️ Game Settings</h2>
             
             <div className="settings-list">
+              <div className="setting-item">
+                <label>🎓 Grade / Standard</label>
+                <select
+                  value={settings.grade ?? 'grade2'}
+                  onChange={(e) => handleSettingsChange('grade', e.target.value as Grade)}
+                  className="setting-select"
+                >
+                  {GRADES.map((g) => (
+                    <option key={g.value} value={g.value}>{g.label}</option>
+                  ))}
+                </select>
+                <p className="voice-note">Changes which words and difficulty levels your child sees.</p>
+              </div>
+
               <div className="setting-item">
                 <label>Maximum Attempts per Word</label>
                 <select
