@@ -1,5 +1,7 @@
+'use client';
+
 import { useState, useEffect } from 'react';
-import '../pages/MathWorksheet.css';
+import '../screens/MathWorksheet.css';
 
 type OperationType = 'multiplication' | 'division';
 

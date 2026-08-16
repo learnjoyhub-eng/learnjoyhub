@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect } from 'react';
 import './GoogleAd.css';
 
@@ -8,13 +10,14 @@ interface GoogleAdProps {
   className?: string;
 }
 
-const GoogleAd: React.FC<GoogleAdProps> = ({ 
-  adSlot, 
+const GoogleAd: React.FC<GoogleAdProps> = ({
+  adSlot,
   adFormat = 'auto',
   adStyle = { display: 'block' },
   className = ''
 }) => {
-  const isProduction = import.meta.env.PROD;
+  const isProduction = process.env.NODE_ENV === 'production';
+  const adClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
 
   useEffect(() => {
     if (isProduction && window.adsbygoogle) {
@@ -27,7 +30,7 @@ const GoogleAd: React.FC<GoogleAdProps> = ({
   }, [isProduction]);
 
   // Don't render ads in development mode
-  if (!isProduction) {
+  if (!isProduction || !adClient) {
     return (
       <div className={`ad-placeholder ${className}`} style={{
         background: 'linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%)',
@@ -54,7 +57,7 @@ const GoogleAd: React.FC<GoogleAdProps> = ({
       <ins
         className="adsbygoogle"
         style={adStyle}
-        data-ad-client="ca-pub-5142509621825412"
+        data-ad-client={adClient}
         data-ad-slot={adSlot}
         data-ad-format={adFormat}
         data-full-width-responsive="true"
@@ -68,6 +71,6 @@ export default GoogleAd;
 // Type declaration for window.adsbygoogle
 declare global {
   interface Window {
-    adsbygoogle: any[];
+    adsbygoogle: unknown[];
   }
 }

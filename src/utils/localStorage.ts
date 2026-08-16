@@ -297,20 +297,20 @@ export const resetProgress = (): void => {
 };
 
 // Settings
+export const DEFAULT_SETTINGS: GameSettings = {
+  maxAttempts: 3,
+  hintsEnabled: true,
+  audioEnabled: true,
+};
+
 export const getSettings = (): GameSettings => {
   const stored = localStorage.getItem(STORAGE_KEYS.SETTINGS);
   if (stored) {
     return JSON.parse(stored);
   }
-  
-  const defaultSettings: GameSettings = {
-    maxAttempts: 3,
-    hintsEnabled: true,
-    audioEnabled: true,
-  };
-  
-  localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(defaultSettings));
-  return defaultSettings;
+
+  localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(DEFAULT_SETTINGS));
+  return DEFAULT_SETTINGS;
 };
 
 export const saveSettings = (settings: GameSettings): void => {
