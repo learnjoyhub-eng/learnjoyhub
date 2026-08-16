@@ -1,3 +1,5 @@
+export type Grade = 'grade2' | 'grade3';
+
 export interface Word {
   id: string;
   word: string;
@@ -5,6 +7,7 @@ export interface Word {
   category?: string;
   isPriority: boolean;
   createdAt: string;
+  grade?: Grade;
 }
 
 export interface GameSettings {
@@ -12,6 +15,7 @@ export interface GameSettings {
   hintsEnabled: boolean;
   audioEnabled: boolean;
   preferredVoice?: string;
+  grade?: Grade;
 }
 
 export interface AttemptResult {

@@ -4,7 +4,13 @@ import { useState, useEffect } from 'react';
 import './MathWorksheet.css';
 
 type OperationType = 'addition' | 'subtraction';
-type DifficultyLevel = '2digit' | '3digit';
+type DifficultyLevel = '2digit' | '3digit' | '4digit';
+
+const DIGIT_RANGES: Record<DifficultyLevel, { min: number; max: number; label: string }> = {
+  '2digit': { min: 10, max: 99, label: '2-Digit' },
+  '3digit': { min: 100, max: 999, label: '3-Digit' },
+  '4digit': { min: 1000, max: 9999, label: '4-Digit' },
+};
 
 interface Problem {
   id: number;
@@ -30,8 +36,7 @@ const MathWorksheet = ({ operation, difficulty, onBack }: MathWorksheetProps) =>
   // Generate random problems
   const generateProblems = () => {
     const newProblems: Problem[] = [];
-    const min = difficulty === '2digit' ? 10 : 100;
-    const max = difficulty === '2digit' ? 99 : 999;
+    const { min, max } = DIGIT_RANGES[difficulty];
 
     for (let i = 0; i < 10; i++) {
       let num1 = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -125,7 +130,7 @@ const MathWorksheet = ({ operation, difficulty, onBack }: MathWorksheetProps) =>
         <div className="header-info">
           <h1>
             {operation === 'addition' ? '➕ Addition' : '➖ Subtraction'} -{' '}
-            {difficulty === '2digit' ? '2-Digit' : '3-Digit'} Numbers
+            {DIGIT_RANGES[difficulty].label} Numbers
           </h1>
           <div className="timer">⏱️ Time: {formatTime(timeElapsed)}</div>
         </div>
