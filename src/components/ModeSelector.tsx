@@ -1,17 +1,17 @@
+'use client';
+
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { trackComponentAccess } from '../utils/analytics';
 import './ModeSelector.css';
 
-interface ModeSelectorProps {
-  onSelectMode: (mode: 'parent' | 'child') => void;
-}
-
-const ModeSelector = ({ onSelectMode }: ModeSelectorProps) => {
+const ModeSelector = () => {
+  const router = useRouter();
   const [hoveredMode, setHoveredMode] = useState<'parent' | 'child' | null>(null);
 
   const handleModeSelect = (mode: 'parent' | 'child') => {
     trackComponentAccess('Mode Selector', mode === 'parent' ? 'Parent Mode' : 'Child Mode');
-    onSelectMode(mode);
+    router.push(`/english/${mode}`);
   };
 
   return (
@@ -19,7 +19,7 @@ const ModeSelector = ({ onSelectMode }: ModeSelectorProps) => {
       <div className="mode-selector-content">
         <h1 className="app-title">🎯 Spelling Champion</h1>
         <p className="app-subtitle">Choose your mode to begin!</p>
-        
+
         <div className="mode-cards">
           <div
             className={`mode-card parent-mode ${hoveredMode === 'parent' ? 'hovered' : ''}`}

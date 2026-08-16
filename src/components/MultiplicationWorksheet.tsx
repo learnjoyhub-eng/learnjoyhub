@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import '../pages/MathWorksheet.css';
+import '../screens/MathWorksheet.css';
 
 interface MultiplicationProblem {
   table: number;

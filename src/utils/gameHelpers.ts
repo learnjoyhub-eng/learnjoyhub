@@ -1,3 +1,5 @@
+import type { Word } from '../types';
+
 export const speakWord = (word: string, preferredVoice?: string): void => {
   if ('speechSynthesis' in window) {
     // Cancel any ongoing speech
@@ -173,7 +175,7 @@ export const compareWords = (input: string, correct: string): {
   return { isCorrect: false, feedback };
 };
 
-export const getRandomWord = (words: any[], excludeIds: string[] = []): any | null => {
+export const getRandomWord = (words: Word[], excludeIds: string[] = []): Word | null => {
   const available = words.filter(w => !excludeIds.includes(w.id));
   if (available.length === 0) return null;
   

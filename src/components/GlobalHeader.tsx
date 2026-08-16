@@ -1,60 +1,62 @@
-import React from 'react';
+'use client';
+
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter, usePathname } from 'next/navigation';
 import logoImage from '../assets/image.png';
 import './GlobalHeader.css';
 
-interface GlobalHeaderProps {
-  onLogoClick: () => void;
-  onNavigate?: (section: 'home' | 'about' | 'modules') => void;
-}
+const GlobalHeader = () => {
+  const router = useRouter();
+  const pathname = usePathname();
 
-const GlobalHeader: React.FC<GlobalHeaderProps> = ({ onLogoClick, onNavigate }) => {
   const handleNavClick = (section: 'home' | 'about' | 'modules') => {
-    if (onNavigate) {
-      onNavigate(section);
-    } else {
-      // Fallback to scrolling if navigation callback not provided
-      if (section === 'home') {
-        onLogoClick();
+    if (section === 'home') {
+      if (pathname !== '/') {
+        router.push('/');
       } else {
-        const element = document.getElementById(section);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
+      return;
+    }
+
+    if (pathname !== '/') {
+      router.push(`/#${section}`);
+      return;
+    }
+
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
     <header className="global-header">
       <div className="header-container">
-        <div 
-          className="header-logo-section" 
-          onClick={onLogoClick}
-          role="button"
-          tabIndex={0}
-        >
-          <img src={logoImage} alt="LearnJoyHub Logo" className="header-logo" />
+        <Link href="/" className="header-logo-section">
+          <Image src={logoImage} alt="LearnJoyHub Logo" className="header-logo" />
           <div className="header-branding">
             <h1 className="domain-name">LearnJoyHub</h1>
             <p className="domain-url">learnjoyhub.in</p>
           </div>
-        </div>
-        
+        </Link>
+
         <nav className="header-nav">
-          <button 
-            className="nav-link" 
+          <button
+            className="nav-link"
             onClick={() => handleNavClick('home')}
           >
             🏠 Home
           </button>
-          <button 
-            className="nav-link" 
+          <button
+            className="nav-link"
             onClick={() => handleNavClick('about')}
           >
             📖 About
           </button>
-          <button 
-            className="nav-link" 
+          <button
+            className="nav-link"
             onClick={() => handleNavClick('modules')}
           >
             🎓 Modules
