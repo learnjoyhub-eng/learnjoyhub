@@ -58,6 +58,23 @@ const SubjectSelector = () => {
             </ul>
             <div className="subject-arrow">→</div>
           </div>
+
+          <div
+            className={`subject-card knowledge-subject ${hoveredSubject === 'knowledge' ? 'hovered' : ''}`}
+            onClick={() => handleSubjectSelect('knowledge')}
+            onMouseEnter={() => setHoveredSubject('knowledge')}
+            onMouseLeave={() => setHoveredSubject(null)}
+          >
+            <div className="subject-icon">🧠</div>
+            <h2>Knowledge</h2>
+            <p>Science, GK & Health quizzes</p>
+            <ul className="subject-features">
+              <li>✓ Science facts</li>
+              <li>✓ General Knowledge</li>
+              <li>✓ Health Education</li>
+            </ul>
+            <div className="subject-arrow">→</div>
+          </div>
         </div>
       </div>
     </div>

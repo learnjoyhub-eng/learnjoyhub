@@ -65,6 +65,24 @@
   transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   text-align: center;
+  position: relative;
+}
+
+.difficulty-grade-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #f0f0f0;
+  color: #666;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 50px;
+}
+
+.difficulty-grade-badge.new {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
 }
 
 .difficulty-card:hover,

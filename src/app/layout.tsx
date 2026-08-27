@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     default: 'LearnJoyHub - Interactive Learning for Kids | ICSE Curriculum & Numerology',
     template: '%s | LearnJoyHub',
   },
-  description: 'LearnJoyHub - Interactive learning platform for 2nd Std ICSE students. Fun spelling games, maths practice, and numerology tools for the whole family. Learn with joy!',
-  keywords: ['ICSE learning', '2nd standard', 'spelling game', 'maths practice', 'numerology calculator', 'kids education', 'interactive learning', 'LearnJoyHub', 'Indian curriculum'],
+  description: 'LearnJoyHub - Interactive learning platform for 2nd and 3rd Std ICSE students. Fun spelling games, maths practice, Science/GK/Health quizzes, and numerology tools for the whole family. Learn with joy!',
+  keywords: ['ICSE learning', '2nd standard', '3rd standard', 'spelling game', 'maths practice', 'science quiz', 'general knowledge quiz', 'health education', 'numerology calculator', 'kids education', 'interactive learning', 'LearnJoyHub', 'Indian curriculum'],
   authors: [{ name: 'LearnJoyHub' }],
   robots: { index: true, follow: true },
   icons: {

@@ -16,7 +16,7 @@ export default function LandingPage() {
           </p>
           <div className="hero-cta">
             <TrackedButton href="/subjects" trackComponent="Landing Page" trackMode="Kids Learning" className="cta-button primary">
-              🎓 Kids Learning (2nd Std ICSE)
+              🎓 Kids Learning (2nd & 3rd Std ICSE)
             </TrackedButton>
             <TrackedButton href="/numerology" trackComponent="Landing Page" trackMode="Numerology" className="cta-button secondary">
               🔢 Numerology Explorer
@@ -41,10 +41,11 @@ export default function LandingPage() {
           <div className="module-card kids-module">
             <div className="module-icon">🎓</div>
             <h3>Kids Learning</h3>
-            <p className="module-grade">2nd Standard ICSE</p>
+            <p className="module-grade">2nd & 3rd Standard ICSE — pick your grade in the menu above</p>
             <div className="module-features">
               <div className="feature">📖 English - Spelling Game</div>
               <div className="feature">🔢 Maths - Arithmetic</div>
+              <div className="feature">🧠 Science, GK & Health Quizzes</div>
               <div className="feature">🎮 Interactive Worksheets</div>
               <div className="feature">📊 Progress Tracking</div>
               <div className="feature">👨‍👩‍👧 Parent Dashboard</div>

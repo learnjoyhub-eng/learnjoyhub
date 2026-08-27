@@ -113,6 +113,15 @@
   color: white;
 }
 
+.subject-card.knowledge-subject {
+  border-top: 5px solid #764ba2;
+}
+
+.subject-card.knowledge-subject:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
 .subject-icon {
   font-size: 4rem;
   margin-bottom: 20px;

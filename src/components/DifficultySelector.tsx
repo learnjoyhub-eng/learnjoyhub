@@ -34,6 +34,7 @@ const DifficultySelector = ({ operation, onSelectDifficulty, onBack }: Difficult
             onMouseEnter={() => setHoveredDifficulty('2digit')}
             onMouseLeave={() => setHoveredDifficulty(null)}
           >
+            <div className="difficulty-grade-badge">🎓 2nd Std</div>
             <div className="difficulty-icon">2️⃣</div>
             <h2>2-Digit Numbers</h2>
             <p>Numbers from 10 to 99</p>
@@ -47,6 +48,7 @@ const DifficultySelector = ({ operation, onSelectDifficulty, onBack }: Difficult
             onMouseEnter={() => setHoveredDifficulty('3digit')}
             onMouseLeave={() => setHoveredDifficulty(null)}
           >
+            <div className="difficulty-grade-badge">🎓 2nd–3rd Std</div>
             <div className="difficulty-icon">3️⃣</div>
             <h2>3-Digit Numbers</h2>
             <p>Numbers from 100 to 999</p>
@@ -60,6 +62,7 @@ const DifficultySelector = ({ operation, onSelectDifficulty, onBack }: Difficult
             onMouseEnter={() => setHoveredDifficulty('4digit')}
             onMouseLeave={() => setHoveredDifficulty(null)}
           >
+            <div className="difficulty-grade-badge new">🎓 3rd Std</div>
             <div className="difficulty-icon">4️⃣</div>
             <h2>4-Digit Numbers</h2>
             <p>Numbers from 1000 to 9999</p>

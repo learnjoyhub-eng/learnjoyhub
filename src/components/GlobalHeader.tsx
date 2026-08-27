@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import logoImage from '../assets/image.png';
+import GradeSwitcher from './GradeSwitcher';
 import './GlobalHeader.css';
 
 const GlobalHeader = () => {
@@ -61,6 +62,7 @@ const GlobalHeader = () => {
           >
             🎓 Modules
           </button>
+          <GradeSwitcher />
         </nav>
       </div>
     </header>

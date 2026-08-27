@@ -35,5 +35,20 @@ export interface GameProgress {
 }
 
 export type GameMode = 'parent' | 'child';
-export type Subject = 'english' | 'maths';
+export type Subject = 'english' | 'maths' | 'knowledge';
 export type MathsSubtopic = 'addition' | 'subtraction' | 'multiplication' | 'division';
+
+export type KnowledgeSubject = 'science' | 'gk' | 'health';
+export type QuestionType = 'mcq' | 'truefalse';
+
+export interface QuizQuestion {
+  id: string;
+  subject: KnowledgeSubject;
+  grade: Grade;
+  type: QuestionType;
+  question: string;
+  options?: string[];
+  correctAnswer: string;
+  explanation: string;
+  category?: string;
+}
